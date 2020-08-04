@@ -29,7 +29,7 @@ export class Resume extends React.Component {
             <Row>
               <Col></Col>
               <Col>
-                <div className="head" Style={{ height: "50vmax" }}>
+                <div className="head">
                   <h1>
                     <i>ABOUT</i>
                   </h1>

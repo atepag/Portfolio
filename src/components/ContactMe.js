@@ -17,7 +17,7 @@ export class ContactMe extends React.Component {
 
     axios({
       method: "POST",
-      url: "http://atepag.github.io/Portfolio/send",
+      url: "http://atepag.github.io/Portfolio",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
@@ -39,7 +39,7 @@ export class ContactMe extends React.Component {
           <Row>
             <Col></Col>
             <Col>
-              <div className="head" Style={{ height: "50vmax" }}>
+              <div className="head">
                 <a id="contactme"></a>
 
                 <h1>
