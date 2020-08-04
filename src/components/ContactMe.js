@@ -17,8 +17,12 @@ export class ContactMe extends React.Component {
 
     axios({
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Credentials": "true",
+      },
       url:
-        "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
+        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
