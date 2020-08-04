@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Origin: http://atepag.github.io/Portfolio");
 header("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
 header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 header("Content-Type: application/json");

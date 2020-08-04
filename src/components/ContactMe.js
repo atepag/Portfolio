@@ -18,7 +18,7 @@ export class ContactMe extends React.Component {
     axios({
       method: "POST",
       url:
-        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
+        "https://cors-anywhere.herokuapp.com/https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
