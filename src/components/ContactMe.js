@@ -17,7 +17,8 @@ export class ContactMe extends React.Component {
 
     axios({
       method: "POST",
-      url: "http://atepag.github.io/Portfolio",
+      url:
+        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
