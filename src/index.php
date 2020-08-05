@@ -2,7 +2,7 @@
 header("HTTP/1.1 200 OK");
 header("Access-Control-Allow-Origin: http://atepag.github.io/Portfolio");
 header("Access-Control-Allow-Methods", " POST, GET, DELETE, HEAD, OPTIONS");
-header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, origin");
 header("Content-Type: application/json");
 
 

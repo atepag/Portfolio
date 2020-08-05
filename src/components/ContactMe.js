@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Container, Col } from "react-bootstrap";
 import "../Style.css";
 import axios from "axios";
+import php from "../index.php";
 
 export class ContactMe extends React.Component {
   constructor(props) {
@@ -16,19 +17,14 @@ export class ContactMe extends React.Component {
     e.preventDefault();
 
     const email = { data: this.state };
-    axios
-      .post(
-        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
-        { email }
-      )
-      .then((response) => {
-        if (response.data.status === "success") {
-          alert("Message Sent.");
-          this.resetForm();
-        } else if (response.data.status === "fail") {
-          alert("Message failed to send.");
-        }
-      });
+    axios.post(php, { email }).then((response) => {
+      if (response.data.status === "success") {
+        alert("Message Sent.");
+        this.resetForm();
+      } else if (response.data.status === "fail") {
+        alert("Message failed to send.");
+      }
+    });
   }
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
