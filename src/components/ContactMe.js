@@ -15,15 +15,8 @@ export class ContactMe extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    axios({
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Credentials": "true",
-      },
-      url: "http://atepag.github.io/Portfolio",
-      data: this.state,
-    }).then((response) => {
+    const email = { data: this.state };
+    axios.post("../index.php", { email }).then((response) => {
       if (response.data.status === "success") {
         alert("Message Sent.");
         this.resetForm();
