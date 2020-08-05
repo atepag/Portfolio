@@ -21,8 +21,7 @@ export class ContactMe extends React.Component {
         "Content-Type": "application/json",
         "Access-Control-Allow-Credentials": "true",
       },
-      url:
-        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
+      url: "http://atepag.github.io/Portfolio",
       data: this.state,
     }).then((response) => {
       if (response.data.status === "success") {
