@@ -2,8 +2,9 @@ import React from "react";
 import { Row, Container, Col } from "react-bootstrap";
 import "../Style.css";
 import axios from "axios";
-import php from "../index.php";
 
+const API_PATH =
+  "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php";
 export class ContactMe extends React.Component {
   constructor(props) {
     super(props);
@@ -16,8 +17,12 @@ export class ContactMe extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const email = { data: this.state };
-    axios.post(php, { email }).then((response) => {
+    axios({
+      method: "post",
+      url: `${API_PATH}`,
+      headers: { "content-type": "application/json" },
+      data: this.state,
+    }).then((response) => {
       if (response.data.status === "success") {
         alert("Message Sent.");
         this.resetForm();

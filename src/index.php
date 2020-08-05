@@ -1,9 +1,7 @@
 <?php
-header("HTTP/1.1 200 OK");
-header("Access-Control-Allow-Origin: http://atepag.github.io/Portfolio");
-header("Access-Control-Allow-Methods", " POST, GET, DELETE, HEAD, OPTIONS");
-header("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With, origin");
-header("Content-Type: application/json");
+
+header("Access-Control-Allow-Origin: *");
+http_response_code(200);
 
 
 $rest_json = file_get_contents("php://input");
@@ -11,6 +9,7 @@ $_POST = json_decode($rest_json, true);
 
 $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
+    
   if (empty($_POST['email'])) {
     $errors[] = 'Email is empty';
   } else {
