@@ -10,7 +10,6 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 header("HTTP/1.1 200 OK");
 die();
 }
-
 $rest_json = file_get_contents("php://input");
 $_POST = json_decode($rest_json, true);
 
