@@ -17,7 +17,10 @@ export class ContactMe extends React.Component {
 
     const email = { data: this.state };
     axios
-      .post("http://atepag.github.io/Portfolio", { email })
+      .post(
+        "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php",
+        { email }
+      )
       .then((response) => {
         if (response.data.status === "success") {
           alert("Message Sent.");
