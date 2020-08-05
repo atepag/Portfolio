@@ -16,14 +16,16 @@ export class ContactMe extends React.Component {
     e.preventDefault();
 
     const email = { data: this.state };
-    axios.post("../index.php", { email }).then((response) => {
-      if (response.data.status === "success") {
-        alert("Message Sent.");
-        this.resetForm();
-      } else if (response.data.status === "fail") {
-        alert("Message failed to send.");
-      }
-    });
+    axios
+      .post("http://atepag.github.io/Portfolio", { email })
+      .then((response) => {
+        if (response.data.status === "success") {
+          alert("Message Sent.");
+          this.resetForm();
+        } else if (response.data.status === "fail") {
+          alert("Message failed to send.");
+        }
+      });
   }
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
