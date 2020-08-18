@@ -1,6 +1,11 @@
 <?php
 
 header("Access-Control-Allow-Origin: https://atepag.github.io/Portfolio/");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, application/xml, X-PINGOTHER");
+header("Access-Control-Request-Method: POST");
+header("Access-Control-Allow-Credentials: true");
+header("Access-Control-Max-Age: 86400");
 http_response_code(200);
 
 
