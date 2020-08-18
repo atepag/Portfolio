@@ -3,7 +3,8 @@ import { Row, Container, Col } from "react-bootstrap";
 import "../Style.css";
 import axios from "axios";
 
-const API_PATH = "https://atepag.github.io/Portfolio/";
+const API_PATH =
+  "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php";
 export class ContactMe extends React.Component {
   constructor(props) {
     super(props);
