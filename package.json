@@ -1,7 +1,7 @@
 {
   "homepage": "http://atepag.github.io/Portfolio",
   "name": "my-portfolio",
-  "proxy": "https://raw.githubusercontent.com",
+  "proxy": "https://cors.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
