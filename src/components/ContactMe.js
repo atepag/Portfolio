@@ -64,13 +64,27 @@ export class ContactMe extends React.Component {
                     cols="55"
                     placeholder="Enter message here..."
                   ></textarea>
-                  <input
-                    type="submit"
-                    value="send"
-                    className="btn btn-dark"
-                    style={{ marginRight: "5vmax" }}
-                  />
-                  <input type="Reset" value="Reset" className="btn btn-dark" />
+                  <Container>
+                    <Row>
+                      <Col xs={6} md={4}></Col>
+                      <Col xs={3} md={2}>
+                        <input
+                          type="submit"
+                          value="send"
+                          className="btn btn-dark"
+                          style={{ marginRight: "5vmax" }}
+                        />
+                      </Col>
+                      <Col xs={3} md={2}>
+                        <input
+                          type="Reset"
+                          value="Reset"
+                          className="btn btn-dark"
+                        />
+                      </Col>
+                      <Col xs={6} md={4}></Col>
+                    </Row>
+                  </Container>
                   <br />
                 </form>
               </div>
