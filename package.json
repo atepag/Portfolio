@@ -1,6 +1,7 @@
 {
   "homepage": "http://atepag.github.io/Portfolio",
   "name": "my-portfolio",
+  "proxy": "https://raw.githubusercontent.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
