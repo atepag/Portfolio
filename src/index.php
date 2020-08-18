@@ -1,6 +1,6 @@
 <?php
 
-header("Access-Control-Allow-Origin: https://atepag.github.io/Portfolio/");
+header("Access-Control-Allow-Origin: https://atepag.github.io");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Authorization, Content-Type, application/xml, X-PINGOTHER");
 header("Access-Control-Request-Method: POST");
