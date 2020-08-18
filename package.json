@@ -1,7 +1,6 @@
 {
   "homepage": "http://atepag.github.io/Portfolio",
   "name": "my-portfolio",
-  "proxy": "https://cors.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +9,9 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
+    "dotenv": "^8.2.0",
     "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.11",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",

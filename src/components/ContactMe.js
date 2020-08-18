@@ -2,6 +2,23 @@ import React from "react";
 import { Row, Container, Col } from "react-bootstrap";
 import "../Style.css";
 import axios from "axios";
+require("dotenv").config();
+const nodemailer = require("nodemailer");
+
+let transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+});
+
+let mailOptions = {
+  from: "",
+  to: "arturo.tepaleag@gmail.com",
+  subject: "Contact Form",
+  text: "",
+};
 
 const API_PATH =
   "https://cors.io/https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php";
@@ -17,7 +34,21 @@ export class ContactMe extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    axios({
+    mailOptions = {
+      from: this.state.email,
+      to: "arturo.tepaleag@gmail.com",
+      subject: "Contact Form - " + this.state.name,
+      text: this.state.message,
+    };
+    transporter.sendMail(mailOptions, function (err, data) {
+      if (err) {
+        alert("Message failed to send.");
+      } else {
+        alert("Message Sent.");
+        this.resetForm();
+      }
+    });
+    /*axios({
       method: "post",
       url: `${API_PATH}`,
       headers: { "content-type": "application/json" },
@@ -29,7 +60,7 @@ export class ContactMe extends React.Component {
       } else if (response.data.status === "fail") {
         alert("Message failed to send.");
       }
-    });
+    });*/
   }
   resetForm() {
     this.setState({ name: "", email: "", message: "" });
