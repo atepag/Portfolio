@@ -4,7 +4,7 @@ import "../Style.css";
 import axios from "axios";
 
 const API_PATH =
-  "https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php";
+  "https://cors.io/https://raw.githubusercontent.com/atepag/Portfolio/master/src/index.php";
 export class ContactMe extends React.Component {
   constructor(props) {
     super(props);
