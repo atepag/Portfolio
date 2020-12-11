@@ -6,10 +6,17 @@ form {
 table {
   width: 100%;
   text-align: center;
-  margin-top: 5vmin;
+  margin: 5%;
+  margin-right: 5%;
+  display: inline-flex;
+  background-color: ivory;
 }
-
+dd {
+  font-size: large;
+}
 td {
+  width: auto;
+  display: contents;
   padding-top: 1vmin;
 }
 
@@ -61,8 +68,8 @@ a {
 
 .more {
   font-family: "Nebula-Regular";
-  font-size: 2.5em;
-  text-align: left;
+  font-size: 3vmax;
+  display: contents;
   color: white;
 }
 
@@ -73,7 +80,10 @@ a {
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  position: relative;
+  width: 100%;
+}
+.btns {
+  display: contents;
 }
 .input {
   color: black;
@@ -81,53 +91,64 @@ a {
   font-weight: bold;
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
-  position: relative;
+  width: 100%;
+  height: 3vmax;
   font-family: "Audiowide";
 }
 .form {
   font-family: "Audiowide";
 }
-
+.yoRow {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
 .yo {
   font-family: "Nebula-Regular";
   font-size: 6vmax;
   color: white;
-  text-align: left;
-  margin-top: 10%;
+  width: 100vmin;
+  display: contents;
 }
 .bio {
+  display: contents;
   text-align: center;
   font-size: 2.5vmin;
+  width: 100vmin;
   font-family: "Audiowide";
 }
 .Contact {
   background-color: rgba(12, 55, 66, 0.85);
   animation: mymove 6s infinite;
   padding: 5vmin;
-  margin-right: 8vmin;
-  margin-left: 8vmin;
-  margin-bottom: 5vmin;
-  margin-top: 5vmin;
+  margin-right: 4%;
+  margin-left: 8%;
+  margin-bottom: 5%;
+  margin-top: 5%;
   border-radius: 2%;
   color: white;
-  width: 100%;
+  width: auto;
   height: auto;
   border: 0.5px solid white;
+  display: block;
 }
 .Email {
   background-color: rgba(12, 55, 66, 0.85);
   animation: mymove 6s infinite;
   padding: 5%;
   border-radius: 20px;
-  position: relative;
+  display: flex;
+  justify-content: center;
   font-family: "Audiowide";
   border: 0.5px solid white;
 }
 .resumetitle {
   font-family: "Nebula-Regular";
+  font-size: 1.5vmax;
 }
 .resumedesc {
   font-family: "Audiowide";
+  font-size: 1.5vmax;
 }
 .Links {
   font-family: "Times New Roman";
@@ -143,6 +164,8 @@ a {
   margin-bottom: 5%;
   border: 0.25em solid white;
   border-radius: 100%;
+  width: 300px;
+  height: 300px;
 }
 .message {
   line-height: 10em;
@@ -157,11 +180,11 @@ a {
 }
 .head {
   font-family: "Nebula-Regular";
-  font-size: 7vmin;
+  font-size: 5vmax;
   color: white;
   text-align: center;
+  display: contents;
   padding-top: 1.5vmax;
-  height: 7vmax;
 }
 .pages {
   color: white;
@@ -193,18 +216,31 @@ a {
 }
 @media only screen and (max-width: 850px) {
   .Me {
-    height: 60%;
-    width: 60%;
+    height: 150px;
+    width: 150px;
+  }
+  .Links {
+    height: 20px;
+    width: 20px;
+  }
+  .resumedesc {
+    font-size: 1em;
+  }
+  .resumedivs {
+    padding: 1%;
   }
 }
 .resumedivs {
   border-radius: 5%;
   background-color: rgba(12, 55, 66, 0.85);
   padding: 5%;
-  height: 23vmax;
-  margin-bottom: 2vmax;
+  height: auto;
+  width: auto;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
   text-align: left;
-  font-size: 2.2vmin;
+  font-size: 2vmax;
   border: 0.5px solid white;
 }
 .grid-container {
@@ -275,6 +311,7 @@ a {
 .pj_img {
   width: 15vmin;
   height: 10vmin;
+  object-fit: scale-down;
 }
 
 .certificates {
@@ -284,6 +321,9 @@ a {
   padding: 10px;
 }
 
+.projectRow {
+  margin-bottom: 3%;
+}
 .projects_div {
   background-color: rgba(12, 55, 66, 0.85);
   animation: mymove 6s infinite;
@@ -291,13 +331,18 @@ a {
   border-radius: 20px;
   text-align: left;
   width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
   border: 0.5px solid white;
 }
 .emoji {
-  font-size: 3em;
+  font-size: 3vmax;
   padding-top: 10px;
-  padding-left: 3cm;
-  text-align: left;
+  display: contents;
+}
+.moreDiv {
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes mymove {

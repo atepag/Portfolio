@@ -8,23 +8,23 @@ export class ContactMe extends React.Component {
       <div style={{ width: "100vmax" }}>
         <Container style={{ width: "100%" }}>
           <Row>
-            <Col></Col>
-            <Col>
+            <Col xs={1} md={3}></Col>
+            <Col xs={16} md={6} className="moreDiv">
               <div className="head">
-                <a id="contactme"></a>
-
                 <h1>
                   <i>CONTACT ME</i>
                 </h1>
               </div>
             </Col>
-            <Col></Col>
+            <Col xs={1} md={3}></Col>
           </Row>
           <Row>
-            <Col xs={3} md={2}></Col>
-            <Col xs={12} md={8}>
-              <div className="Email">
+            <Col xs={1} md={2}></Col>
+            <Col xs={16} md={8}>
+              <div >
+                <a id="contactme"></a>
                 <form
+                  className="Email"
                   name="gform"
                   id="gform"
                   encType="text/plain"
@@ -33,40 +33,53 @@ export class ContactMe extends React.Component {
                   target="gform"
                   // viewform?usp=pp_url&entry.1580263407=simon&entry.951937055=simones&entry.320361436=simonete}
                 >
-                  Name:
-                  <br />
-                  <input
-                    className="input"
-                    name="entry.1580263407"
-                    type="text"
-                    id="entry.1580263407"
-                    size="40"
-                    placeholder="Your name"
-                  />
-                  <br />
-                  Email:
-                  <br />
-                  <input
-                    className="input"
-                    type="email"
-                    name="entry.951937055"
-                    id="entry.951937055 "
-                    size="40"
-                    placeholder="Your email address"
-                  />
-                  <br />
-                  Message:
-                  <br />
-                  <textarea
-                    className="hint"
-                    id="entry.320361436"
-                    name="entry.320361436"
-                    cols="55"
-                    placeholder="Enter message here..."
-                  ></textarea>
                   <Container>
                     <Row>
-                      <Col xs={6} md={4}></Col>
+                      <Col xs={2} md={3}>
+                        <p>Name</p>
+                      </Col>
+                      <Col xs={16} md={9}>
+                        <input
+                          className="input"
+                          name="entry.1580263407"
+                          type="text"
+                          id="entry.1580263407"
+                          size="40"
+                          placeholder="Your name"
+                        />
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={2} md={3}>
+                        <p>Email</p>
+                      </Col>
+                      <Col xs={16} md={9}>
+                        <input
+                          className="input"
+                          type="email"
+                          name="entry.951937055"
+                          id="entry.951937055 "
+                          size="40"
+                          placeholder="Your email address"
+                        />
+                        </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={2} md={3}>
+                        <p>Message</p>
+                      </Col>
+                      <Col xs={16} md={9}>
+                        <textarea
+                          className="hint"
+                          id="entry.320361436"
+                          name="entry.320361436"
+                          cols="55"
+                          placeholder="Enter message here..."
+                        ></textarea>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={3} md={4}></Col>
                       <Col xs={3} md={2}>
                         <input
                           type="submit"
@@ -82,10 +95,9 @@ export class ContactMe extends React.Component {
                           className="btn btn-dark"
                         />
                       </Col>
-                      <Col xs={6} md={4}></Col>
+                      <Col xs={3} md={4}></Col>
                     </Row>
                   </Container>
-                  <br />
                 </form>
               </div>
             </Col>

@@ -8,25 +8,30 @@ export class Greeting extends React.Component {
       <div>
         <Container>
           <Row>
-            <div style={{ height: "5vmax" }}></div>
-          </Row>
-          <Row>
             <Col>
+              <div style={{ height: "5vmin" }}></div>
+            </Col> 
+          </Row>
+          <Row className="yoRow">
+            <Col >
               <h1 className="yo">
                 <strong>
                   HELLO
+                  
+                  <br />
+                  I AM
                   <span role="img" aria-label="hi">
                     &#x1F44B;
                   </span>
-                  <br />
-                  I'M
                   <br />
                   ARTURO TEPALE AGUILAR
                 </strong>
               </h1>
             </Col>
           </Row>
-          <Row></Row>
+          <Row>
+          <div style={{ height: "5vmin" }}></div>
+          </Row>
         </Container>
       </div>
     );

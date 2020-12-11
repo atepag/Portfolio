@@ -6,32 +6,54 @@ export class Projects extends React.Component {
   render() {
     return (
       <div style={{ width: "100vmax" }}>
-        <Container style={{ width: "100%" }}>
+        <Container fluid style={{ width: "100%" }}>
           <Row>
-            <Col></Col>
-            <Col>
-              <div className="head">
-                <h1>
+            <Col xs={2} md={3}></Col>
+            <Col xs={14} md={6} className="moreDiv">
+              <div >
+                <h1 className="head">
                   <i>PROJECTS</i>
                 </h1>
               </div>
             </Col>
-            <Col></Col>
+            <Col xs={2} md={3}></Col>
           </Row>
           <Row>
             <div className="projects_div">
-              <Container>
-                <Row>
-                  <Col xs={14} md={10}>
+              <Container fluid>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
-                      <dt className="project">Takeotech’s Contracto</dt>
+                      <dt className="project">Projects Network</dt>
                       <dd className="projectDesc">
-                        Contract Manager project – working as a Database
-                        Developer
+                        Networking website in which users can seek help from other users 
+                        to create/implement a project idea and/or seek an idea/project to 
+                        help others with. The goal of this is for anyone to be able to help 
+                        others while gaining some experience that could later benefit them into 
+                        the work field.
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
+                    <img
+                      className="pj_img"
+                      src={require("../pictures/pnlogo.png")}
+                      alt="CONTRACTO"
+                    />
+                  </Col>
+                </Row>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
+                    <dl>
+                      <dt className="project">Takeotech’s Contracto</dt>
+                      <dd className="projectDesc">
+                        Contract Manager project – worked on database portion of the project
+                         in which an ERD and UML was made to initialize the project. Also 
+                         helped with the design prototype.
+                      </dd>
+                    </dl>
+                  </Col>
+                  <Col xs={2} md={2}>
                     <img
                       className="pj_img"
                       src={require("../pictures/contracto.png")}
@@ -39,8 +61,8 @@ export class Projects extends React.Component {
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col xs={14} md={10}>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
                       <dt className="project">Lookout</dt>
                       <dd className="projectDesc">
@@ -50,7 +72,7 @@ export class Projects extends React.Component {
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
                     {" "}
                     <img
                       className="pj_img"
@@ -59,8 +81,8 @@ export class Projects extends React.Component {
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col xs={14} md={10}>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
                       <dt className="project">COVID19 MAP</dt>
                       <dd className="projectDesc">
@@ -72,17 +94,16 @@ export class Projects extends React.Component {
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
                     <img
+                      className="pj_img"
                       src={require("../pictures/coronavirus.svg")}
-                      width="150"
-                      height="70"
                       alt="COVID19"
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col xs={14} md={10}>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
                       <dt className="project">Sliding Puzzle</dt>
                       <dd className="projectDesc">
@@ -94,17 +115,16 @@ export class Projects extends React.Component {
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
                     <img
+                      className="pj_img"
                       src={require("../pictures/puzzle.png")}
-                      width="70"
-                      height="70"
                       alt="puzzle"
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col xs={14} md={10}>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
                       <dt className="project">android Studio Budget app</dt>
                       <dd className="projectDesc">
@@ -115,17 +135,16 @@ export class Projects extends React.Component {
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
                     <img
+                      className="pj_img"
                       src={require("../pictures/as.png")}
-                      width="100"
-                      height="100"
                       alt="ANDROID STUDIO"
                     />
                   </Col>
                 </Row>
-                <Row>
-                  <Col xs={14} md={10}>
+                <Row className="projectRow">
+                  <Col xs={16} md={10}>
                     <dl>
                       <dt className="project">Unity Mobile Game</dt>
                       <dd className="projectDesc">
@@ -133,33 +152,33 @@ export class Projects extends React.Component {
                       </dd>
                     </dl>
                   </Col>
-                  <Col xs={4} md={2}>
+                  <Col xs={2} md={2}>
                     <img
+                      className="pj_img"
                       src={require("../pictures/uni.png")}
-                      width="150"
-                      height="70"
                       alt="UNITY"
                     />
                   </Col>
                 </Row>
 
-                <Row>
-                  <Col></Col>
-                  <Col></Col>
-                </Row>
               </Container>
             </div>
           </Row>
           <Row>
-            <div>
+            <Col xs={1} md={1}></Col>
+            <Col xs={16} md={10}>
+            <div className="moreDiv">
               <span className="emoji" role="img" aria-label="lol">
                 &#x1F440;&#x1F447;
               </span>
+              <br/>
               <p className="more">
                 LOOKING FOR MORE? WELL GO RIGHT AHEAD, <br />
                 ASSIGN ME SOMETHING TO DO
               </p>
             </div>
+            </Col>
+            <Col xs={1} md={1}></Col>
           </Row>
         </Container>
       </div>
